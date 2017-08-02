@@ -5,23 +5,7 @@
 // canvas.height = window.innerHeight;
 
 // var particleCount = 1000;
-// var mouse = {
-//   x: window.innerWidth / 2,
-//   y: window.innerHeight / 2
-// };
 
-// window.addEventListener("mousemove", function(event) {
-//   mouse.x = event.clientX - canvas.width / 2;
-//   mouse.y = event.clientY - canvas.height / 2;
-// });
-
-// window.addEventListener("resize", function() {
-//   canvas.width = window.innerWidth;
-//   canvas.height = window.innerHeight;
-
-//   lightParticles = [];
-//   initializeParticles();
-// });
 
 // function LightParticle(x, y, radius, color) {
 //   this.x = x;
@@ -99,6 +83,10 @@
 // }
 
 // animate();
+
+
+
+//portfolio slides
 function openAboutMe() {
   document.getElementById("openAboutMe").style.width = "80%";
 }
