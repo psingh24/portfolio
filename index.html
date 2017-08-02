@@ -3,7 +3,9 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
     <link rel="stylesheet" href="portfolio.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css">
     <!-- in your header -->
     <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
     <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
@@ -13,7 +15,7 @@
 <body>
     <!-- main contents -->
     <div id="main">
-        <canvas></canvas>
+         <!-- <canvas></canvas>  -->
 
         <div id="nav_wrapper">
             <header id="header" role="header">
@@ -32,16 +34,47 @@
 
                             <div class="overlay-content">
                                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                                <h1>About me</h1>
+                                <h4>About me</h4>
 
-                                <i class="devicon-javascript-plain logo"></i>
-                                <i class="devicon-jquery-plain-wordmark logo"></i>
-                                <i class="devicon-mysql-plain-wordmark logo"></i>
-                                <i class="devicon-nodejs-plain-wordmark logo"></i>
-                                <i class="devicon-sequelize-plain-wordmark logo"></i>
-                                <i class="devicon-bootstrap-plain logo"></i>
-                                <i class="devicon-express-original-wordmark logo"></i>
-                                <i class="devicon-github-plain-wordmark logo"></i>
+
+                                <div class="row">
+
+
+
+                                    <div class="three columns">
+                                        <img class="self" src="images/pic.png" alt="self-pic">
+                                    </div>
+                                    <div class="nine columns">
+                                    <div class="first">
+                                        Hi there, my name is <span class="name">Prabhdeep Singh</span> and I am a full stack developer living in Dallas, TX. I am a driven professional, excellent communicator and adept at working with diverse teams to implement projects. 
+                                    </div>
+
+                                     <div class="second">
+                                        I recently graduated from the University of Texas Coding Bootcamp. My undergrad consisted of studying biology, chemistry and physics but my true passion was in software. How it worked, how it's made and how it can help others. So after spending the last few years in Sales/Business Development, I made the decision to teach myself how to code. Most days after work I would be on free code camp or Codecademy trying to learn as much as I could.
+                                    </div>
+
+                                    <div class="third">
+                                       Through tons of self study and the UT coding bootcamp I feel confident in my abilities and am ready to tackle my first role as a developer. Below is a list of a few of the technologies I am familiar with but I am always learning more.
+
+                                       In my spare time I enjoy playing basketball and watching movies. Huge sci-fi nerd and will watch anything related to outer space.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <i class="devicon-javascript-plain logo"></i>
+                                    <i class="devicon-jquery-plain-wordmark logo"></i>
+                                    <i class="devicon-mysql-plain-wordmark logo"></i>
+                                    <i class="devicon-nodejs-plain-wordmark logo"></i>
+                                    <i class="devicon-sequelize-plain-wordmark logo"></i>
+                                    <i class="devicon-bootstrap-plain logo"></i>
+                                    <i class="devicon-express-original-wordmark logo"></i>
+                                    <i class="devicon-github-plain-wordmark logo"></i>
+                                    <i class="devicon-ruby-plain-wordmark logo"></i>
+                                    <i class="devicon-mongodb-plain-wordmark logo"></i>
+                                    <i class="devicon-react-original-wordmark logo"></i>
+                                    <i class="devicon-laravel-plain-wordmark logo"></i>
+                                    <i class="devicon-php-plain logo"></i>
+                                </div>
                             </div>
                         </div>
                     </li>
@@ -52,21 +85,29 @@
                             <div class="overlay-content">
                                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 
-                                <h1>Portfolio</h1>
+                                <h4>Portfolio</h4>
                                 <div class="slideshow-container">
                                     <div class="mySlides fade">
-                                    <div class="numbertext">1 / 7</div>
-                                    <a href="https://stormy-fjord-40452.herokuapp.com/" target="_blank"><img src="images/Allyall.png" style="width:60%"></a>
-                                        
-                                       <div class="title">All Y'all</div>
-                                        <div class="text">Application to find things to do in Austin. Pick your favorite foods, beverages andtypes of entertainment and get back an organized list of matches. The app will also show if parking is avilable near your reults.</div>
+                                        <div class="numbertext">1 / 7</div>
+                                        <a href="https://stormy-fjord-40452.herokuapp.com/" target="_blank"><img src="images/Allyall.png" style="width:60%"></a>
+
+                                        <div class="title">All Y'all</div>
+                                        <div class="text">
+                                            Application to find things to do in Austin. Pick your favorite foods, beverages
+                                                andtypes of entertainment and get back an organized list of matches. The
+                                                app will also show if parking is avilable near your reults.
+                                        </div>
                                     </div>
 
                                     <div class="mySlides fade">
                                         <div class="numbertext">2 / 7</div>
                                         <a href="https://github.com/psingh24/bamazon" target="_blank"><img src="images/bamazon.png" style="width:60%"></a>
                                         <div class="title">Bamazon</div>
-                                        <div class="text">Bamazon is an interactive cli shopping app where MySQL and Node.JS are used to allowusers to purchase items as a customer, view, track and update the product inventory as a manager, and track the total sales by department as an supervisor.</div>
+                                        <div class="text">
+                                            Bamazon is an interactive cli shopping app where MySQL and Node.JS are used to
+                                                allowusers to purchase items as a customer, view, track and update the product
+                                                inventory as a manager, and track the total sales by department as an supervisor.
+                                        </div>
 
 
                                     </div>
@@ -75,28 +116,44 @@
                                         <div class="numbertext">3 / 7</div>
                                         <a href="https://murmuring-meadow-20459.herokuapp.com/" target="_blank"><img src="images/burgers.png" style="width:60%"></a>
                                         <div class="title">Eat-da-burger</div>
-                                        <div class="text">This Full-stack app is made with Node.js, Express.js, Handlebars and MySQL. Save burgers under "On the Menu", devour those burgers and move them to the left.</div>
+                                        <div class="text">
+                                            This Full-stack app is made with Node.js, Express.js, Handlebars and MySQL. Save
+                                                burgers under "On the Menu", devour those burgers and move them to the left.
+                                        </div>
                                     </div>
 
                                     <div class="mySlides fade">
                                         <div class="numbertext">4 / 7</div>
                                         <a href="https://young-everglades-67260.herokuapp.com/" target="_blank"><img src="images/friendfinder.png" style="width:60%"></a>
                                         <div class="title">friend finder</div>
-                                        <div class="text">This Full-stack site will take in results your users' surveys, then compare their answers with those from other users. The app will then display the name and picture of the user with the best overall match. Uses Node.js, Express.js.</div>
+                                        <div class="text">
+                                            Full-stack site will take in results your users' surveys, then compare their
+                                                answers with those from other users. The app will then display the name and
+                                                picture of the user with the best overall match. Uses Node.js, Express.js.
+                                        </div>
                                     </div>
 
                                     <div class="mySlides fade">
                                         <div class="numbertext">5 / 7</div>
                                         <a href="https://psingh24.github.io/Hangman-Game/" target="_blank"><img src="images/hangman.png" style="width:60%"></a>
                                         <div class="title">Pokemon Hangman</div>
-                                        <div class="text">Simple hangman game using JS and Jquery with a pokemon theme. Each missed letter counts as a guess, you get 10 total guesses. Try to catch all the pokemon by guessing who they are.</div>
+                                        <div class="text">
+                                            Simple hangman game using JS and Jquery with a pokemon theme. Each missed letter
+                                                counts as a guess, you get 10 total guesses. Try to catch all the pokemon
+                                                by guessing who they are.
+                                        </div>
                                     </div>
 
                                     <div class="mySlides fade">
                                         <div class="numbertext">6 / 7</div>
                                         <a href="https://github.com/psingh24/liri-node-app-inquirer" target="_blank"><img src="images/liri.png" style="width:60%"></a>
                                         <div class="title">Liri</div>
-                                        <div class="text">LIRI is a command line node app that allows users to choose what type of data they wish to search for and what information to search under each category. It returns the information to the console and also stores the data in the log.txt file.</div>
+                                        <div class="text">
+                                            LIRI is a command line node app that allows users to choose what type of data
+                                                they wish to search for and what information to search under each category.
+                                                It returns the information to the console and also stores the data in the
+                                                log.txt file.
+                                        </div>
 
                                     </div>
 
@@ -104,7 +161,11 @@
                                         <div class="numbertext">7 / 7</div>
                                         <a href="https://psingh24.github.io/starwars/" target="_blank"><img src="images/starwars.png" style="width:60%"></a>
                                         <div class="title">Star Wars RPS</div>
-                                        <div class="text">Simple RPG game using JS and Jquery with a star wars theme. Pick a character and fight against 3 enemies. Beat all three in one life and you win the game, otherwise enemies win.</div>
+                                        <div class="text">
+                                            Simple RPG game using JS and Jquery with a star wars theme. Pick a character
+                                                and fight against 3 enemies. Beat all three in one life and you win the game,
+                                                otherwise enemies win.
+                                        </div>
 
                                     </div>
 
@@ -126,13 +187,13 @@
                         </div>
                     </li>
                     <li class="menu-item">
-                        <a href="#"  id="highlight" onclick="openContact()">Contact Me</a>
+                        <a href="#" id="highlight" onclick="openContact()">Contact Me</a>
                         <div id="openContact" class="overlay">
 
                             <div class="overlay-content">
                                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 
-                                <h1>Contact Me</h1>
+                                <h4>Contact Me</h4>
                                 <div class="container">
                                     <form action="https://formspree.io/ps591990@gmail.com" method="post">
 

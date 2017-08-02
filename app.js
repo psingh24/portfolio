@@ -1,104 +1,104 @@
-var canvas = document.querySelector("canvas");
-var c = canvas.getContext("2d");
+// var canvas = document.querySelector("canvas");
+// var c = canvas.getContext("2d");
 
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+// canvas.width = window.innerWidth;
+// canvas.height = window.innerHeight;
 
-var particleCount = 1000;
-var mouse = {
-  x: window.innerWidth / 2,
-  y: window.innerHeight / 2
-};
+// var particleCount = 1000;
+// var mouse = {
+//   x: window.innerWidth / 2,
+//   y: window.innerHeight / 2
+// };
 
-window.addEventListener("mousemove", function(event) {
-  mouse.x = event.clientX - canvas.width / 2;
-  mouse.y = event.clientY - canvas.height / 2;
-});
+// window.addEventListener("mousemove", function(event) {
+//   mouse.x = event.clientX - canvas.width / 2;
+//   mouse.y = event.clientY - canvas.height / 2;
+// });
 
-window.addEventListener("resize", function() {
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
+// window.addEventListener("resize", function() {
+//   canvas.width = window.innerWidth;
+//   canvas.height = window.innerHeight;
 
-  lightParticles = [];
-  initializeParticles();
-});
+//   lightParticles = [];
+//   initializeParticles();
+// });
 
-function LightParticle(x, y, radius, color) {
-  this.x = x;
-  this.y = y;
-  this.radius = radius;
-  this.color = color;
+// function LightParticle(x, y, radius, color) {
+//   this.x = x;
+//   this.y = y;
+//   this.radius = radius;
+//   this.color = color;
 
-  this.update = function() {
-    this.draw();
-  };
+//   this.update = function() {
+//     this.draw();
+//   };
 
-  this.draw = function() {
-    c.save();
-    c.beginPath();
-    c.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
-    c.shadowColor = this.color;
-    c.shadowBlur = 15;
-    c.shadowOffsetX = 0;
-    c.shadowOffsetY = 0;
-    c.fillStyle = this.color;
-    c.fill();
-    c.closePath();
-    c.restore();
-  };
-}
+//   this.draw = function() {
+//     c.save();
+//     c.beginPath();
+//     c.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
+//     c.shadowColor = this.color;
+//     c.shadowBlur = 15;
+//     c.shadowOffsetX = 0;
+//     c.shadowOffsetY = 0;
+//     c.fillStyle = this.color;
+//     c.fill();
+//     c.closePath();
+//     c.restore();
+//   };
+// }
 
-var lightParticles = [];
+// var lightParticles = [];
 
-var timer = 0;
-var opacity = 1;
-var speed = 0.0005;
-var colors = ["#0952BD", "#A5BFF0", "#118CD6", "#1AAEE8", "#F2E8C9"];
+// var timer = 0;
+// var opacity = 1;
+// var speed = 0.0005;
+// var colors = ["#0952BD", "#A5BFF0", "#118CD6", "#1AAEE8", "#F2E8C9"];
 
-var initializeParticles;
+// var initializeParticles;
 
-(initializeParticles = function() {
-  for (var i = 0; i < particleCount; i++) {
-    var randomColorIndex = Math.floor(Math.random() * 6);
-    var randomRadius = Math.random() * 2;
+// (initializeParticles = function() {
+//   for (var i = 0; i < particleCount; i++) {
+//     var randomColorIndex = Math.floor(Math.random() * 6);
+//     var randomRadius = Math.random() * 2;
 
-    // Ensure particles are spawned past screen width and height so
-    // there will be no missing stars when rotating canvas
-    var x = Math.random() * (canvas.width + 200) - (canvas.width + 200) / 2;
-    var y = Math.random() * (canvas.width + 200) - (canvas.width + 200) / 2;
-    lightParticles.push(
-      new LightParticle(x, y, randomRadius, colors[randomColorIndex])
-    );
-  }
-})();
+//     // Ensure particles are spawned past screen width and height so
+//     // there will be no missing stars when rotating canvas
+//     var x = Math.random() * (canvas.width + 200) - (canvas.width + 200) / 2;
+//     var y = Math.random() * (canvas.width + 200) - (canvas.width + 200) / 2;
+//     lightParticles.push(
+//       new LightParticle(x, y, randomRadius, colors[randomColorIndex])
+//     );
+//   }
+// })();
 
-function animate() {
-  window.requestAnimationFrame(animate);
+// function animate() {
+//   window.requestAnimationFrame(animate);
 
-  c.save();
+//   c.save();
 
-  // Ease back to the original opacity
-  var originalOpacity = 1;
-  opacity += (originalOpacity - opacity) * 0.01;
-  c.fillStyle = "rgba(18, 18, 18, " + opacity + ")";
+//   // Ease back to the original opacity
+//   var originalOpacity = 1;
+//   opacity += (originalOpacity - opacity) * 0.01;
+//   c.fillStyle = "rgba(18, 18, 18, " + opacity + ")";
 
-  // Ease back to the original speed
-  var originalSpeed = 0.001;
-  speed += (originalSpeed - speed) * 0.01;
-  timer += speed;
+//   // Ease back to the original speed
+//   var originalSpeed = 0.001;
+//   speed += (originalSpeed - speed) * 0.01;
+//   timer += speed;
 
-  c.fillRect(0, 0, canvas.width, canvas.height);
-  c.translate(canvas.width / 2, canvas.height / 2);
-  c.rotate(timer);
+//   c.fillRect(0, 0, canvas.width, canvas.height);
+//   c.translate(canvas.width / 2, canvas.height / 2);
+//   c.rotate(timer);
 
-  for (var i = 0; i < lightParticles.length; i++) {
-    lightParticles[i].update();
-  }
+//   for (var i = 0; i < lightParticles.length; i++) {
+//     lightParticles[i].update();
+//   }
 
-  c.restore();
-}
+//   c.restore();
+// }
 
-animate();
+// animate();
 function openAboutMe() {
   document.getElementById("openAboutMe").style.width = "80%";
 }
