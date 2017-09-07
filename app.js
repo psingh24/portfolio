@@ -86,12 +86,18 @@ animate();
 //portfolio slides
 function openAboutMe() {
   document.getElementById("openAboutMe").style.width = "80%";
+   document.getElementById("openPortfolio").style.width = "0%";
+    document.getElementById("openContact").style.width = "0%";
 }
 function openPortfolio() {
   document.getElementById("openPortfolio").style.width = "80%";
+  document.getElementById("openContact").style.width = "0%";
+  document.getElementById("openAboutMe").style.width = "0%";
 }
 function openContact() {
   document.getElementById("openContact").style.width = "80%";
+   document.getElementById("openAboutMe").style.width = "0%";
+   document.getElementById("openPortfolio").style.width = "0%";
 }
 
 function closeNav() {
