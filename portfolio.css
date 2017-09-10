@@ -215,6 +215,13 @@ body {
     background-color: rgba(55, 65, 85, .5)
 }
 
+.links a {
+    font-size: 20px;
+    display: block;
+    float: right;
+    position: relative;
+    top: -100px;
+}
 
 /* Style inputs with type="text", select elements and textareas */
 
